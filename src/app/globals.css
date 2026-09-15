@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+/* ===========================
+   Neobrutalism Blue Palette
+   =========================== */
+:root {
+  --background: #e0d1ff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #88aaee;
+  --primary-foreground: #000000;
+  --secondary: #d4e1ff;
+  --secondary-foreground: #000000;
+  --muted: #dfe5f2;
+  --muted-foreground: #6b7280;
+  --accent: #ffc29f;
+  --accent-foreground: #000000;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #000000;
+  --border: #000000;
+  --input: #000000;
+  --ring: #88aaee;
+  --radius: 0.5rem;
+  
+  /* Neobrutalism tokens */
+  --nb-shadow-x: 4px;
+  --nb-shadow-y: 4px;
+  --nb-border: 2px;
+  --nb-radius: 8px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-space-grotesk);
+}
+
+/* ===========================
+   Base Styles
+   =========================== */
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk, "Space Grotesk"), sans-serif;
+  zoom: 0.9;
+}
+
+/* ===========================
+   Neobrutalism Utilities
+   =========================== */
+.nb-shadow {
+  box-shadow: 4px 4px 0px 0px #000;
+}
+
+.nb-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.nb-shadow-lg {
+  box-shadow: 6px 6px 0px 0px #000;
+}
+
+.nb-shadow-hover {
+  transition: all 0.15s ease;
+}
+
+.nb-shadow-hover:hover {
+  box-shadow: 6px 6px 0px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.nb-shadow-hover:active {
+  box-shadow: 2px 2px 0px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+.nb-border {
+  border: 2px solid #000;
+}
+
+.nb-border-thick {
+  border: 3px solid #000;
+}
+
+/* ===========================
+   Component Styles
+   =========================== */
+.nb-card {
+  background: var(--card);
+  border: 2px solid #000;
+  border-radius: var(--nb-radius);
+  box-shadow: 4px 4px 0px 0px #000;
+  transition: all 0.15s ease;
+}
+
+.nb-card:hover {
+  box-shadow: 6px 6px 0px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.nb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: var(--nb-radius);
+  box-shadow: 4px 4px 0px 0px #000;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.nb-button:hover {
+  box-shadow: 6px 6px 0px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.nb-button:active {
+  box-shadow: 1px 1px 0px 0px #000;
+  transform: translate(3px, 3px);
+}
+
+.nb-button-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.nb-button-secondary {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.nb-button-accent {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.nb-button-ghost {
+  background: transparent;
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+.nb-button-ghost:hover {
+  background: var(--muted);
+  border-color: #000;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.nb-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #000;
+  border-radius: var(--nb-radius);
+  box-shadow: 3px 3px 0px 0px #000;
+  background: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.nb-input:focus {
+  box-shadow: 5px 5px 0px 0px #000;
+  transform: translate(-1px, -1px);
+  border-color: var(--primary);
+}
+
+.nb-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 999px;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.nb-tab {
+  padding: 0.5rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid #000;
+  border-radius: var(--nb-radius);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: white;
+}
+
+.nb-tab:hover {
+  background: var(--muted);
+}
+
+.nb-tab.active {
+  background: var(--primary);
+  box-shadow: 3px 3px 0px 0px #000;
+}
+
+/* ===========================
+   Typing Animation
+   =========================== */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ===========================
+   Marquee Animation
+   =========================== */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* ===========================
+   Scroll Smooth
+   =========================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   Section spacing
+   =========================== */
+section {
+  scroll-margin-top: 5rem;
+}
+
+/* ===========================
+   Custom scrollbar
+   =========================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7799dd;
+}
+
+/* ===========================
+   Neobrutalism Textures & Patterns
+   =========================== */
+.bg-neo-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1.5px, transparent 1.5px);
+}
+
+.bg-neo-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.tape-badge {
+  background: rgba(254, 240, 138, 0.85);
+  border: 1px dashed rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.bg-sketch-grid {
+  background-color: #fcfaf2;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1.5px, transparent 1.5px);
+}
