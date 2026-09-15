@@ -59,6 +59,19 @@ export default function Contact() {
     } catch (err) {
       console.log(err);
     }
+
+    // Format mailto link to open user's default email client
+    const subject = encodeURIComponent(
+      formData.subject || `Pesan Portofolio dari ${formData.name}`
+    );
+    const body = encodeURIComponent(
+      `Halo Yuliagus,\n\nNama Pengirim: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}\n\n---\nDikirim melalui Formulir Kontak Portofolio`
+    );
+    const mailtoUrl = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
+
+    // Trigger email client
+    window.location.href = mailtoUrl;
+
     setIsSubmitted(true);
   };
 
@@ -168,7 +181,7 @@ export default function Contact() {
                     Kirim Pesan Langsung
                   </h3>
                   <p className="text-xs sm:text-sm font-medium text-neutral-600">
-                    Formulir interaktif langsung terhubung
+                    Otomatis membuka aplikasi email Anda
                   </p>
                 </div>
                 <span className="p-2 bg-[#ffdb58] border-2 border-black rounded-xl font-black text-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
@@ -177,30 +190,37 @@ export default function Contact() {
               </div>
 
               {isSubmitted ? (
-                <div className="p-8 bg-[#a3e635] border-3 border-black rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-center space-y-4">
-                  <span className="inline-block p-3 bg-white border-2 border-black rounded-2xl text-3xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                    🎉
+                <div className="p-8 bg-[#a3e635] border-3.5 border-black rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-center space-y-4">
+                  <span className="inline-block p-3 bg-white border-2.5 border-black rounded-2xl text-3xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    📬
                   </span>
-                  <h4 className="text-2xl font-black text-black">Pesan Berhasil Terkirim!</h4>
-                  <p className="text-sm font-bold text-neutral-800 max-w-md mx-auto">
-                    Terima kasih telah menghubungi saya. Anda juga bisa langsung chat via WhatsApp untuk respons lebih cepat.
+                  <h4 className="text-2xl font-black text-black">Aplikasi Email Anda Dibuka!</h4>
+                  <p className="text-sm font-bold text-neutral-900 max-w-md mx-auto leading-relaxed">
+                    Draf pesan telah disiapkan dan dialihkan ke aplikasi email (Gmail / Outlook / Mail) Anda menuju ke <strong className="underline">{personalInfo.email}</strong>.
                   </p>
                   <div className="flex flex-wrap justify-center gap-3 pt-2">
+                    <a
+                      href={`mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject || `Pesan dari ${formData.name}`)}&body=${encodeURIComponent(`Halo Yuliagus,\n\nNama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`)}`}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-neutral-100 text-black font-black text-sm uppercase tracking-wider border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
+                    >
+                      <Mail size={18} />
+                      <span>Buka Ulang Email</span>
+                    </a>
                     <button
                       onClick={handleWhatsAppDirect}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-neutral-100 text-black font-black text-sm uppercase tracking-wider border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ffdb58] hover:bg-[#ffe680] text-black font-black text-sm uppercase tracking-wider border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
                     >
                       <WhatsAppIcon size={18} />
-                      <span>Chat WhatsApp Sekarang</span>
+                      <span>Atau Chat WhatsApp</span>
                     </button>
                     <button
                       onClick={() => {
                         setIsSubmitted(false);
                         setFormData({ name: "", email: "", subject: "", message: "" });
                       }}
-                      className="px-5 py-2.5 bg-[#bc95d4] text-black font-black text-sm uppercase tracking-wider border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                      className="px-5 py-2.5 bg-[#bc95d4] text-black font-black text-sm uppercase tracking-wider border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#cca8e3]"
                     >
-                      Kirim Pesan Lain
+                      Tulis Pesan Baru
                     </button>
                   </div>
                 </div>
