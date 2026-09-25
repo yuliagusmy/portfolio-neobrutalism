@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { personalInfo, navLinks, socialLinks } from "@/lib/data";
 import { ArrowUp, Heart, Sparkles } from "lucide-react";
 import {
@@ -46,7 +47,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-between">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-3">
-            <a href="#home" className="inline-flex items-center gap-2 font-black text-2xl text-black">
+            <Link href="/" className="inline-flex items-center gap-2 font-black text-2xl text-black">
               <span className="inline-flex items-center justify-center w-9 h-9 bg-[#bc95d4] border-2 border-black rounded-xl font-black text-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                 ⚡
               </span>
@@ -54,7 +55,7 @@ export default function Footer() {
                 {personalInfo.brand}
                 <span className="text-[#a388ee]">.</span>
               </span>
-            </a>
+            </Link>
             <p className="text-xs md:text-sm font-medium text-neutral-700 max-w-sm leading-relaxed">
               {personalInfo.name}, Web Developer & Visual Creator berdedikasi membangun karya digital yang berdampak nyata.
             </p>
@@ -63,13 +64,13 @@ export default function Footer() {
           {/* Nav Links */}
           <div className="md:col-span-4 flex flex-wrap gap-2 md:justify-center">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                className="px-3 py-1 font-extrabold text-xs text-black bg-[#faf8ff] hover:bg-[#ffdb58] border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all"
+                className="px-3 py-2 min-h-[40px] flex items-center justify-center font-extrabold text-xs text-black bg-[#faf8ff] hover:bg-[#ffdb58] border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -82,7 +83,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="p-2 bg-[#faf8ff] hover:bg-[#88aaee] text-black border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all"
+                className="w-11 h-11 flex items-center justify-center bg-[#faf8ff] hover:bg-[#88aaee] text-black border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all"
               >
                 {iconMap[social.icon]}
               </a>
@@ -92,7 +93,7 @@ export default function Footer() {
             <button
               onClick={scrollToTop}
               aria-label="Back to top"
-              className="p-2 bg-[#a3e635] hover:bg-[#86efac] text-black border-2 border-black rounded-xl shadow-[2.5px_2.5px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all"
+              className="w-11 h-11 flex items-center justify-center bg-[#a3e635] hover:bg-[#86efac] text-black border-2 border-black rounded-xl shadow-[2.5px_2.5px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer"
               title="Kembali ke Atas"
             >
               <ArrowUp size={18} className="stroke-[3]" />

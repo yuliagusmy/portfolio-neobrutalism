@@ -57,11 +57,11 @@ export default function Certificates() {
         </div>
 
         {/* Filter Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-8 sm:mb-12">
           <button
             type="button"
             onClick={() => setActiveFilter("all")}
-            className={`px-4 py-2 text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
+            className={`px-3.5 py-2 sm:px-4 sm:py-2 min-h-[44px] flex items-center justify-center text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
               activeFilter === "all"
                 ? "bg-[#ffdb58] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] translate-x-[-2px] translate-y-[-2px]"
                 : "bg-white text-neutral-800 hover:bg-neutral-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
@@ -72,7 +72,7 @@ export default function Certificates() {
           <button
             type="button"
             onClick={() => setActiveFilter("dicoding")}
-            className={`px-4 py-2 text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
+            className={`px-3.5 py-2 sm:px-4 sm:py-2 min-h-[44px] flex items-center justify-center text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
               activeFilter === "dicoding"
                 ? "bg-[#88aaee] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] translate-x-[-2px] translate-y-[-2px]"
                 : "bg-white text-neutral-800 hover:bg-neutral-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
@@ -83,7 +83,7 @@ export default function Certificates() {
           <button
             type="button"
             onClick={() => setActiveFilter("coursera")}
-            className={`px-4 py-2 text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
+            className={`px-3.5 py-2 sm:px-4 sm:py-2 min-h-[44px] flex items-center justify-center text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
               activeFilter === "coursera"
                 ? "bg-[#ff90e8] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] translate-x-[-2px] translate-y-[-2px]"
                 : "bg-white text-neutral-800 hover:bg-neutral-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
@@ -94,7 +94,7 @@ export default function Certificates() {
           <button
             type="button"
             onClick={() => setActiveFilter("myskill")}
-            className={`px-4 py-2 text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
+            className={`px-3.5 py-2 sm:px-4 sm:py-2 min-h-[44px] flex items-center justify-center text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
               activeFilter === "myskill"
                 ? "bg-[#a3e635] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] translate-x-[-2px] translate-y-[-2px]"
                 : "bg-white text-neutral-800 hover:bg-neutral-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
@@ -105,7 +105,7 @@ export default function Certificates() {
           <button
             type="button"
             onClick={() => setActiveFilter("other")}
-            className={`px-4 py-2 text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
+            className={`px-3.5 py-2 sm:px-4 sm:py-2 min-h-[44px] flex items-center justify-center text-xs md:text-sm font-black rounded-xl border-2.5 border-black cursor-pointer transition-all ${
               activeFilter === "other"
                 ? "bg-[#bc95d4] text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] translate-x-[-2px] translate-y-[-2px]"
                 : "bg-white text-neutral-800 hover:bg-neutral-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
@@ -204,7 +204,7 @@ export default function Certificates() {
                   <button
                     type="button"
                     onClick={() => setSelectedCert(cert)}
-                    className="text-xs font-black uppercase text-black hover:underline flex items-center gap-1 cursor-pointer"
+                    className="min-h-[44px] text-xs font-black uppercase text-black hover:underline flex items-center gap-1 cursor-pointer"
                   >
                     <span>🔍 Perbesar</span>
                   </button>
@@ -212,7 +212,7 @@ export default function Certificates() {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-black hover:text-white text-black font-black text-xs uppercase tracking-wider border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+                    className="min-h-[44px] inline-flex items-center justify-center gap-1.5 px-3.5 py-2 bg-white hover:bg-black hover:text-white text-black font-black text-xs uppercase tracking-wider border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
                   >
                     <span>Verifikasi</span>
                     <ExternalLink size={13} className="stroke-[2.5]" />
@@ -227,17 +227,17 @@ export default function Certificates() {
       {/* Modal Zoom */}
       {selectedCert && (
         <div
-          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4"
           onClick={() => setSelectedCert(null)}
         >
           <div
-            className="relative max-w-4xl w-full bg-white border-3.5 border-black rounded-2xl p-5 sm:p-7 shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] flex flex-col gap-4 max-h-[92vh] overflow-y-auto"
+            className="relative max-w-4xl w-full bg-white border-3.5 border-black rounded-2xl p-4 sm:p-7 shadow-[5px_5px_0px_0px_rgba(255,255,255,1)] sm:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] flex flex-col gap-3.5 sm:gap-4 max-h-[92vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-start justify-between gap-4 border-b-2.5 border-black pb-3">
+            <div className="flex items-start justify-between gap-3 border-b-2.5 border-black pb-3">
               <div>
-                <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
                   <span className="px-2.5 py-0.5 text-xs font-black bg-[#ffdb58] text-black border-1.5 border-black rounded shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
                     {selectedCert.issuer}
                   </span>
@@ -250,14 +250,14 @@ export default function Certificates() {
                     </span>
                   )}
                 </div>
-                <h3 className="text-lg sm:text-xl font-black text-black tracking-tight">
+                <h3 className="text-base sm:text-xl font-black text-black tracking-tight leading-snug">
                   {selectedCert.title}
                 </h3>
               </div>
               <button
                 onClick={() => setSelectedCert(null)}
                 aria-label="Tutup pratinjau sertifikat"
-                className="p-2 bg-[#ff5f56] text-white border-2.5 border-black rounded-full font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black cursor-pointer shrink-0"
+                className="w-11 h-11 flex items-center justify-center bg-[#ff5f56] text-white border-2.5 border-black rounded-full font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black cursor-pointer shrink-0"
               >
                 <X size={20} className="stroke-[3]" />
               </button>

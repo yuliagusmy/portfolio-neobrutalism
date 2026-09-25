@@ -6,22 +6,23 @@ export const personalInfo = {
   name: "Yuliagus M. Yunus",
   nickname: "Agus",
   brand: "MieAyammm",
-  title: "Front-End Web Developer",
+  title: "Front-End Web Developer & Creative Talent",
   email: "yuliagusmy@gmail.com",
   phone: "+6285341920479",
+  canvaPresentationLink: "https://www.canva.com/design/DAHIbplC0jI/KJ6WYpasPdeFI3VYdEPUyg/view",
   cvLink:
     "https://drive.google.com/file/d/1yt0qtbtePNN2JuZSiOZoPnzeETVl6BSJ/view?usp=sharing",
-  profileImage: "/images/profile-pic.png",
+  profileImage: "/images/profile-black.jpg",
   tagline: "Sebaik-baik manusia adalah yang bermanfaat bagi orang lain dan sekitarnya.",
   mbti: "ENFJ",
   socialBattery: "1000% Social Battery 🔋",
   vibe: "Happy Virus ✨",
   instagramHandle: "@yuliagusmyunus",
   instagramFollowers: "2.9K+",
-  typingTexts: ["Web Developer", "Designer", "Traveler", "Yogis", "Climber", "Hiker", "Photographer", "Runner", "Cyclist", "Volunteer", "Videographer", "Filmmaker", "Editor", "Content Creator", "Digital Marketer"],
-  bio: `Hai, saya Agus, seorang Front-End Web Developer dengan kepribadian ENFJ (1000% Social Battery & Happy Virus!) yang berfokus pada antarmuka pengguna fungsional dan estetis. Selain aktif di dunia web dan desain tipografi, saya juga aktif di kegiatan sosial kemanusiaan (Yayasan Celebes Cleft Center & Smile Train) serta seni panggung Teater Remaja Makassar. Visi saya adalah memanfaatkan teknologi dan kreativitas untuk menciptakan dampak positif bagi orang lain.`,
-  friendMessage: `Saya selalu bersemangat berkenalan dengan orang baru dan sangat terbuka untuk kolaborasi proyek, kegiatan sosial (volunteer), berbagi info kegiatan positif, hingga diskusi teknologi dan desain.`,
-  friendMessage2: `Mari terhubung dan bersama-sama menciptakan sesuatu yang positif dan bermanfaat!`,
+  typingTexts: ["Web Developer", "Creative Talent", "Social Media Designer", "Videographer", "Filmmaker", "Content Creator", "Volunteer", "Yogis", "Traveler", "Runner"],
+  bio: `Hai, saya Agus, seorang Front-End Web Developer dan Creative Worker dengan kepribadian ENFJ (1000% Social Battery & Happy Virus!) yang berfokus pada antarmuka web fungsional serta kreasi konten visual berdampak. Selain aktif dalam pemrograman web dan eksplorasi tipografi, saya juga berkarya sebagai freelance talent bersama YOTTA, menggerakkan literasi di Diskusi Buku Bareng (DBB), menjelajah kota bersama Jalan Bareng Makassar, serta berekspresi di panggung seni Teater Remaja Makassar.`,
+  friendMessage: `Saya selalu bersemangat berkenalan dengan orang baru dan sangat terbuka untuk kolaborasi proyek web, konten video kreatif, aktivitas sosial, hingga diskusi teknologi dan desain.`,
+  friendMessage2: `Mari terhubung dan bersama-sama menciptakan karya yang positif dan bermanfaat!`,
 };
 
 export const socialLinks = [
@@ -75,6 +76,17 @@ export const education = [
       },
     ],
   },
+  {
+    category: "Kreatif & Freelance",
+    items: [
+      {
+        title: "Freelance Creative Talent - YOTTA Indonesia",
+        period: "2024 - Sekarang",
+        description:
+          "Talent konten kreatif, pemeran video campaign komersial (Campaign End of Year Vacation Drama, Campaign Yotta x Hydro Coco), promosi pembukaan outlet baru, dan aktivasi media sosial Yotta.",
+      },
+    ],
+  },
 ];
 
 export type OrganizationItem = {
@@ -113,6 +125,20 @@ export const organizations: OrganizationItem[] = [
       "Aktif dalam seni pertunjukan teater, mengasah olah ekspresi, rasa percaya diri, dan komunikasi panggung interaktif.",
     badge: "Creative & Performing Arts",
   },
+  {
+    title: "Diskusi Buku Bareng (DBB)",
+    role: "Pegiat Komunitas & Graphic Designer",
+    description:
+      "Menggerakkan perjamuan buku dan literasi publik di Makassar, serta merancang seluruh identitas visual, poster bedah buku, dan publikasi media sosial berkala DBB.",
+    badge: "Literasi & Community",
+  },
+  {
+    title: "Jalan Bareng Makassar",
+    role: "Kontributor Komunitas & Creative Explorer",
+    description:
+      "Eksplorasi sudut-sudut kota Makassar, dokumentasi kreatif ruang publik, dan mengampanyekan gaya hidup sehat berjalan kaki bersama komunitas.",
+    badge: "Urban Exploration",
+  },
 ];
 
 export type PortfolioProject = {
@@ -127,22 +153,44 @@ export type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    title: "Pemeriksaan Kelelahan Karyawan",
+    title: "Jalan Bareng Makassar",
     description:
-      "Website analisis tingkat kelelahan karyawan dengan fitur rekomendasi tindakan. Dibangun menggunakan HTML5, TailwindCSS, dan JavaScript.",
-    image: "/images/portfolio/website/Screenshot (374).png",
+      "Platform web komunitas eksplorasi jalan kaki dan aktivasi literasi di Makassar. Menyediakan katalog rute penjelajahan, aktivasi ruang kreatif, dan integrasi kegiatan kolaboratif warga.",
+    image: "/images/portfolio/website/jalan-bareng.png",
     category: "website",
-    tags: ["HTML5", "TailwindCSS", "JavaScript"],
-    link: "https://vgshf.github.io/pemeriksaan-kelelahan-karyawan/",
+    tags: ["Nuxt.js", "Vue 3", "Pinia", "TailwindCSS", "Laravel"],
+    link: "https://github.com/yuliagusmy/jalanbareng",
+    github: "https://github.com/yuliagusmy/jalanbareng",
   },
   {
-    title: "Website Portofolio",
+    title: "Brinarent: Platform Sewa Buku",
     description:
-      "Website portofolio pribadi dengan desain modern dan responsif. Menampilkan proyek-proyek unggulan dan informasi kontak.",
-    image: "/images/portfolio/website/Screenshot (379).png",
+      "Platform sirkulasi peminjaman buku fisik modern dan aman dengan verifikasi identitas pengguna terintegrasi tanpa perlu menyetor uang deposit jaminan.",
+    image: "/images/portfolio/website/brina-rent.jpg",
     category: "website",
-    tags: ["HTML5", "TailwindCSS", "JavaScript"],
-    link: "https://yuliagusmy.github.io/portofolio-tailwindcss/",
+    tags: ["Next.js 15", "React 19", "Supabase", "TailwindCSS", "shadcn/ui"],
+    link: "https://github.com/yuliagusmy/",
+    github: "https://github.com/yuliagusmy/",
+  },
+  {
+    title: "Portal Kelurahan Mamajang Luar",
+    description:
+      "Sistem informasi pelayanan digital publik Kelurahan Mamajang Luar Kota Makassar. Menyediakan pengurusan surat online bebas pungli, pelacakan tiket aduan warga, berita terkini, dan etalase UMKM.",
+    image: "/images/portfolio/website/kelurahan-mamajang-luar.png",
+    category: "website",
+    tags: ["React", "TypeScript", "Vite", "Supabase", "TailwindCSS"],
+    link: "https://github.com/yuliagus123456789/web-kelurahan-mamajang-luar",
+    github: "https://github.com/yuliagus123456789/web-kelurahan-mamajang-luar",
+  },
+  {
+    title: "Who Are You by Music",
+    description:
+      "Aplikasi web analitik profil kepribadian musik berbasis AI. Mengintegrasikan Spotify Web API untuk menganalisis kebiasaan mendengarkan lagu dan Google Gemini API untuk menghasilkan deskripsi karakter pengguna.",
+    image: "/images/portfolio/website/whoareyoubymusic-icon.png",
+    category: "website",
+    tags: ["React", "Gemini AI", "Spotify API", "Supabase", "TailwindCSS"],
+    link: "https://github.com/yuliagusmy/whoareyoubymusic",
+    github: "https://github.com/yuliagusmy/whoareyoubymusic",
   },
   {
     title: "TomaTech",
@@ -152,6 +200,45 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "website",
     tags: ["AI/ML", "Python", "TailwindCSS", "JavaScript"],
     link: "https://toma-techs.vercel.app/",
+  },
+  {
+    title: "Pemeriksaan Kelelahan Karyawan",
+    description:
+      "Website analisis tingkat kelelahan karyawan dengan fitur rekomendasi tindakan. Dibangun menggunakan HTML5, TailwindCSS, dan JavaScript.",
+    image: "/images/portfolio/website/Screenshot (374).png",
+    category: "website",
+    tags: ["HTML5", "TailwindCSS", "JavaScript"],
+    link: "https://vgshf.github.io/pemeriksaan-kelelahan-karyawan/",
+  },
+  {
+    title: "Website Portofolio Tailwind",
+    description:
+      "Website portofolio pribadi dengan desain modern dan responsif. Menampilkan proyek-proyek unggulan dan informasi kontak.",
+    image: "/images/portfolio/website/Screenshot (379).png",
+    category: "website",
+    tags: ["HTML5", "TailwindCSS", "JavaScript"],
+    link: "https://yuliagusmy.github.io/portofolio-tailwindcss/",
+    github: "https://github.com/yuliagusmy/portofolio-tailwindcss",
+  },
+  {
+    title: "Simple POS System",
+    description:
+      "Sistem kasir dan Point of Sales modern dengan arsitektur end-to-end type-safe tRPC, autentikasi Clerk, basis data Supabase PostgreSQL via Prisma ORM, dan dynamic QR code.",
+    image: "/images/portfolio/website/Screenshot (380).png",
+    category: "website",
+    tags: ["Next.js", "tRPC", "Prisma", "Supabase", "Clerk", "Zustand"],
+    link: "https://github.com/yuliagusmy/simple-pos-trpc",
+    github: "https://github.com/yuliagusmy/simple-pos-trpc",
+  },
+  {
+    title: "Pomodoro Focus Timer",
+    description:
+      "Aplikasi web pengatur ritme produktivitas berbasis teknik Pomodoro dengan animasi responsif, mode offline, dan tracking interval fokus kerja.",
+    image: "/images/portfolio/website/Screenshot (381).png",
+    category: "website",
+    tags: ["React", "Framer Motion", "Styled Components", "PWA"],
+    link: "https://github.com/yuliagusmy/pomodoro-timer",
+    github: "https://github.com/yuliagusmy/pomodoro-timer",
   },
   {
     title: "HECTIC - English Camp",
@@ -170,6 +257,86 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "design",
     tags: ["Canva", "Photoshop", "Illustrator"],
     link: "https://www.instagram.com/pmm4_telkomuniversity/?hl=en",
+  },
+  {
+    title: "Publikasi Diskusi Buku Bareng (DBB)",
+    description:
+      "Seri desain feed Instagram dan materi visual literasi publik Diskusi Buku Bareng di Makassar, berkolaborasi dengan Alliance Française dan Makassar Creative Hub.",
+    image: "/images/portfolio/social-media-design/dbb-mie-ayam.png",
+    category: "design",
+    tags: ["Canva", "Social Media", "Literasi"],
+    link: "https://www.instagram.com/diskusibukubareng/",
+  },
+  {
+    title: "Campaign Yotta - End of Year Vacation Drama",
+    description:
+      "Konten video drama komedi liburan akhir tahun sebagai freelance talent bersama YOTTA. Berperan dalam produksi konten kreatif dan penyampaian pesan brand secara interaktif.",
+    image: "/images/portfolio/creative-worker/yotta-barbar.jpeg",
+    category: "creative",
+    tags: ["Creative Talent", "Video Campaign", "YOTTA", "Acting"],
+    link: "https://www.youtube.com/watch?v=sumoFFGhZRU",
+  },
+  {
+    title: "Campaign Yotta x Hydro Coco & Outlet Launch",
+    description:
+      "Kampanye video komersial kolaborasi YOTTA x Hydro Coco serta peresmian outlet baru Yotta Express Villa Mutiara Makassar sebagai talent utama.",
+    image: "/images/portfolio/creative-worker/yotta-outlet.jpeg",
+    category: "creative",
+    tags: ["Brand Collaboration", "YOTTA", "Hydro Coco", "Commercial"],
+    link: "https://www.youtube.com/watch?v=-KTCfPPkRWw",
+  },
+];
+
+export type SocialMediaFeed = {
+  title: string;
+  event: string;
+  date: string;
+  image: string;
+  link: string;
+};
+
+export const socialMediaFeeds: SocialMediaFeed[] = [
+  {
+    title: "Bedah Buku: Seporsi Mie Ayam Sebelum Mati",
+    event: "Diskusi Buku Bareng x Alliance Française",
+    date: "15 Februari 2026",
+    image: "/images/portfolio/social-media-design/dbb-mie-ayam.png",
+    link: "https://www.instagram.com/diskusibukubareng/",
+  },
+  {
+    title: "Di Balik Pergerakan Literasi Edisi 1",
+    event: "Jalan Bareng x DBB x Makassar Creative Hub",
+    date: "Panggung Diskusi",
+    image: "/images/portfolio/social-media-design/dbb-pergerakan-literasi.png",
+    link: "https://www.instagram.com/diskusibukubareng/",
+  },
+  {
+    title: "Jadwal Program Rutin Komunitas DBB",
+    event: "Lapak Baca Taman Macan & MIWF Benteng Rotterdam",
+    date: "Agenda Bulanan",
+    image: "/images/portfolio/social-media-design/dbb-jadwal-program.png",
+    link: "https://www.instagram.com/diskusibukubareng/",
+  },
+  {
+    title: "Perjamuan Buku & Lapak Buku Taman Macan",
+    event: "Diskusi Buku Bareng x Jalan Bareng",
+    date: "Minggu 12 April",
+    image: "/images/portfolio/social-media-design/dbb-perjamuan-buku.png",
+    link: "https://www.instagram.com/diskusibukubareng/",
+  },
+  {
+    title: "Perayaan Buku di Makassar Creative Hub",
+    event: "Pantai Losari Kota Makassar",
+    date: "22 Februari 2026",
+    image: "/images/portfolio/social-media-design/dbb-perayaan-buku.png",
+    link: "https://www.instagram.com/diskusibukubareng/",
+  },
+  {
+    title: "Perjamuan Buku Special Chapter Cap Go Meh",
+    event: "Rumah Abu Marga Thoeng Makassar",
+    date: "1 Maret",
+    image: "/images/portfolio/social-media-design/dbb-cap-go-meh.png",
+    link: "https://www.instagram.com/diskusibukubareng/",
   },
 ];
 
@@ -203,29 +370,6 @@ export const clients = [
   { name: "YouTube", logo: "/images/clients/youtube.svg" },
 ];
 
-export const blogPosts = [
-  {
-    title: "Tips Belajar Programming",
-    category: "Programming",
-    description:
-      "Pelajari cara memulai perjalanan programming Anda dengan langkah-langkah mudah dan efektif.",
-    image: "/images/blog/5.png",
-  },
-  {
-    title: "Membangun Website dengan TailwindCSS",
-    category: "Web Development",
-    description:
-      "Panduan lengkap membangun website modern menggunakan TailwindCSS dengan mudah.",
-    image: "/images/blog/1.png",
-  },
-  {
-    title: "Tips Keluar Kota dengan Hemat",
-    category: "Travel",
-    description:
-      "Simak tips dan trik sederhana agar perjalanan keluar kota Anda lebih hemat dan nyaman.",
-    image: "/images/blog/6.png",
-  },
-];
 
 export type CertificateItem = {
   title: string;
@@ -364,10 +508,9 @@ export const certificates: CertificateItem[] = [
 ];
 
 export const navLinks = [
-  { name: "Beranda", href: "#home" },
-  { name: "Tentang", href: "#about" },
-  { name: "Portofolio", href: "#portfolio" },
-  { name: "Blog", href: "#blog" },
-  { name: "Sertifikat", href: "#certificates" },
-  { name: "Kontak", href: "#contact" },
+  { name: "Beranda", href: "/" },
+  { name: "Tentang", href: "/about" },
+  { name: "Portofolio", href: "/portfolio" },
+  { name: "Sertifikat", href: "/certificates" },
+  { name: "Kontak", href: "/contact" },
 ];

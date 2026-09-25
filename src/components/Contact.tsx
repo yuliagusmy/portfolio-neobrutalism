@@ -1,5 +1,5 @@
-"use client";
 
+"use client";
 import React, { useState } from "react";
 import { personalInfo, socialLinks } from "@/lib/data";
 import confetti from "canvas-confetti";
@@ -83,38 +83,38 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 relative bg-[#faf8ff] border-t-3.5 border-black">
+    <section id="contact" className="py-14 sm:py-20 relative bg-[#faf8ff] border-t-3.5 border-black">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-block px-4 py-1 bg-[#ffdb58] text-black border-2.5 border-black rounded-xl font-black text-xs md:text-sm uppercase tracking-widest shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-3 rotate-[-1deg]">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-block px-3.5 py-1 bg-[#ffdb58] text-black border-2.5 border-black rounded-xl font-black text-xs md:text-sm uppercase tracking-widest shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-2.5 sm:mb-3 rotate-[-1deg]">
             Mari Terhubung
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black tracking-tight">
             Hubungi <span className="bg-[#ff90e8] px-3 py-0.5 border-2.5 border-black rounded-xl inline-block rotate-1">Saya</span>
           </h2>
-          <p className="mt-3 text-sm md:text-base font-medium text-neutral-700">
+          <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base font-medium text-neutral-700">
             Punya ide proyek, tawaran pekerjaan, atau sekadar ingin berdiskusi? Jangan ragu mengirimkan pesan!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Left Column: Contact Info & Socials */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white border-3.5 border-black rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-              <h3 className="text-2xl font-black text-black tracking-tight mb-4 flex items-center gap-2">
+          <div className="lg:col-span-5 space-y-5 sm:space-y-6">
+            <div className="bg-white border-3.5 border-black rounded-2xl p-4 sm:p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+              <h3 className="text-xl sm:text-2xl font-black text-black tracking-tight mb-3 sm:mb-4 flex items-center gap-2">
                 <span>Informasi Kontak</span>
-                <span className="text-xl">📫</span>
+                <span className="text-lg sm:text-xl">📫</span>
               </h3>
-              <p className="text-sm font-medium text-neutral-700 leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm font-medium text-neutral-700 leading-relaxed mb-5 sm:mb-6">
                 {personalInfo.friendMessage2}
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {/* Email with Copy Action */}
-                <div className="p-4 bg-[#e0d1ff] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3 overflow-hidden">
-                    <div className="p-2 bg-white border-2 border-black rounded-lg">
+                <div className="p-3.5 sm:p-4 bg-[#e0d1ff] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5 sm:gap-3 overflow-hidden">
+                    <div className="p-2 bg-white border-2 border-black rounded-lg shrink-0">
                       <Mail size={18} />
                     </div>
                     <div className="overflow-hidden">
@@ -124,7 +124,7 @@ export default function Contact() {
                   </div>
                   <button
                     onClick={handleCopyEmail}
-                    className="shrink-0 p-2 bg-white hover:bg-[#ffdb58] text-black border-2 border-black rounded-lg font-bold text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center gap-1"
+                    className="shrink-0 p-2 min-h-[40px] bg-white hover:bg-[#ffdb58] text-black border-2 border-black rounded-lg font-bold text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center gap-1 cursor-pointer"
                     title="Salin Email"
                   >
                     {copied ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
@@ -137,9 +137,9 @@ export default function Contact() {
                   href={`https://wa.me/6285341920479`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-[#a3e635] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-3 hover:translate-x-[-1px] hover:translate-y-[-1px] transition-transform"
+                  className="p-3.5 sm:p-4 bg-[#a3e635] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2.5 sm:gap-3 hover:translate-x-[-1px] hover:translate-y-[-1px] transition-transform"
                 >
-                  <div className="p-2 bg-white border-2 border-black rounded-lg">
+                  <div className="p-2 bg-white border-2 border-black rounded-lg shrink-0">
                     <WhatsAppIcon size={18} />
                   </div>
                   <div>
@@ -150,21 +150,21 @@ export default function Contact() {
               </div>
 
               {/* Social Channels */}
-              <div className="mt-8 pt-6 border-t-2.5 border-black">
+              <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t-2.5 border-black">
                 <p className="text-xs font-black uppercase tracking-wider text-neutral-700 mb-3">
                   Jejaring Sosial:
                 </p>
-                <div className="grid grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-2.5">
                   {socialLinks.map((social) => (
                     <a
                       key={social.name}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 py-2.5 px-3 bg-[#faf8ff] hover:bg-[#ff90e8] text-black border-2 border-black rounded-xl font-black text-xs shadow-[2.5px_2.5px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+                      className="min-h-[44px] flex items-center justify-center gap-2 py-2 px-2.5 sm:px-3 bg-[#faf8ff] hover:bg-[#ff90e8] text-black border-2 border-black rounded-xl font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
                     >
                       {iconMap[social.icon]}
-                      <span>{social.name}</span>
+                      <span className="truncate">{social.name}</span>
                     </a>
                   ))}
                 </div>
@@ -174,7 +174,7 @@ export default function Contact() {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white border-3.5 border-black rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div className="bg-white border-3.5 border-black rounded-2xl p-4 sm:p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex items-center justify-between gap-2 mb-6 pb-4 border-b-2.5 border-black">
                 <div>
                   <h3 className="text-2xl font-black text-black tracking-tight">
@@ -285,7 +285,7 @@ export default function Contact() {
                   <div className="flex flex-col sm:flex-row gap-3 pt-2">
                     <button
                       type="submit"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#88aaee] hover:bg-[#a388ee] text-black font-black text-sm uppercase tracking-wider border-3 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[48px] bg-[#88aaee] hover:bg-[#a388ee] text-black font-black text-sm uppercase tracking-wider border-3 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
                     >
                       <Send size={18} className="stroke-[2.5]" />
                       <span>Kirim Pesan Sekarang</span>
@@ -293,7 +293,7 @@ export default function Contact() {
                     <button
                       type="button"
                       onClick={handleWhatsAppDirect}
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[#a3e635] hover:bg-[#86efac] text-black font-black text-sm uppercase tracking-wider border-3 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 min-h-[48px] bg-[#a3e635] hover:bg-[#86efac] text-black font-black text-sm uppercase tracking-wider border-3 border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
                     >
                       <WhatsAppIcon size={18} />
                       <span>Chat WhatsApp</span>

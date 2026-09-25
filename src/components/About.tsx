@@ -31,10 +31,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 relative bg-[#faf8ff] border-y-3.5 border-black">
+    <section id="about" className="py-14 sm:py-20 relative bg-[#faf8ff] border-y-3.5 border-black">
       {/* Marquee Banner */}
-      <div className="w-full bg-[#ffdb58] border-b-3 border-black py-3 overflow-hidden whitespace-nowrap mb-12 select-none shadow-[inset_0_-2px_0_rgba(0,0,0,1)]">
-        <div className="inline-flex gap-8 items-center font-black text-sm md:text-base tracking-wider uppercase animate-marquee">
+      <div className="w-full bg-[#ffdb58] border-b-3 border-black py-2.5 sm:py-3 overflow-hidden whitespace-nowrap mb-8 sm:mb-12 select-none shadow-[inset_0_-2px_0_rgba(0,0,0,1)]">
+        <div className="inline-flex gap-8 items-center font-black text-xs sm:text-sm md:text-base tracking-wider uppercase animate-marquee">
           <span>⚡ Front-End Development</span>
           <span>•</span>
           <span>🎨 Social Media Design</span>
@@ -59,43 +59,43 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-block px-4 py-1 bg-[#88aaee] text-black border-2.5 border-black rounded-xl font-black text-xs md:text-sm uppercase tracking-widest shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-3 rotate-[-1deg]">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-block px-3.5 py-1 bg-[#88aaee] text-black border-2.5 border-black rounded-xl font-black text-xs md:text-sm uppercase tracking-widest shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-2.5 sm:mb-3 rotate-[-1deg]">
             Kenali Saya Lebih Dekat
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black tracking-tight">
             Tentang <span className="bg-[#bc95d4] px-3 py-0.5 border-2.5 border-black rounded-xl inline-block rotate-1">Saya</span>
           </h2>
-          <p className="mt-3 text-sm md:text-base font-medium text-neutral-700">
+          <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base font-medium text-neutral-700">
             Perjalanan pendidikan, pengalaman organisasi, dan dedikasi saya dalam dunia teknologi & kreatif.
           </p>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Left: Bio & Skills */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6">
             {/* Bio Card - Neobrutalism Sticky Note Style */}
-            <div className="relative bg-white border-3 border-black rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div className="relative bg-white border-3 border-black rounded-2xl p-4 sm:p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
               {/* Tape sticker on top */}
-              <div className="absolute -top-3 right-8 px-4 py-0.5 tape-badge font-mono text-[10px] font-black uppercase text-black border border-black rotate-2">
+              <div className="absolute -top-3 right-4 sm:right-8 px-3 py-0.5 tape-badge font-mono text-[10px] font-black uppercase text-black border border-black rotate-2">
                 📌 PROFILE STORY
               </div>
 
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b-2.5 border-black">
-                <span className="p-2 bg-[#ffdb58] border-2 border-black rounded-lg font-black text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              <div className="flex items-center gap-2 mb-3.5 sm:mb-4 pb-2.5 sm:pb-3 border-b-2.5 border-black">
+                <span className="p-1.5 sm:p-2 bg-[#ffdb58] border-2 border-black rounded-lg font-black text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   👋
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-black text-black">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-black text-black">
                     Bio & Cerita Saya
                   </h3>
-                  <p className="text-xs font-bold text-neutral-600">Front-End Developer & Desainer Visual</p>
+                  <p className="text-[11px] sm:text-xs font-bold text-neutral-600">Front-End Developer & Desainer Visual</p>
                 </div>
               </div>
 
               {/* Story Highlights Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-3.5 sm:mb-4">
                 <div className="p-3 bg-[#e0d1ff] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   <span className="font-black text-xs uppercase text-black block mb-1">🎯 Fokus Utama</span>
                   <p className="text-xs font-semibold text-neutral-800">Antarmuka Pengguna (UI) yang responsif, taktil, dan estetis.</p>
@@ -107,18 +107,18 @@ export default function About() {
               </div>
 
               {/* Personality & Persona Badges (Authentic Instagram & LinkedIn Data) */}
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#ffdb58] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-3.5 sm:mb-4">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#ffdb58] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   🧠 {personalInfo.mbti}
                 </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#a3e635] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#a3e635] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   {personalInfo.socialBattery}
                 </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#ff90e8] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#ff90e8] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   {personalInfo.vibe}
                 </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#88aaee] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  🤝 Info Kegiatan Positif
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#88aaee] border-2 border-black rounded-lg font-black text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                  🤝 Info Positif
                 </span>
               </div>
 
@@ -127,26 +127,26 @@ export default function About() {
               </p>
 
               {/* 4 Real Metric Cards (Authentic Data) */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 mb-4">
-                <div className="p-3 bg-[#ffdb58] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4">
+                <div className="p-2.5 sm:p-3 bg-[#ffdb58] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
                   <span className="font-black text-2xl sm:text-3xl text-black block leading-none">5+</span>
                   <span className="font-extrabold text-[10px] sm:text-xs uppercase tracking-wider text-black block mt-1">Proyek Web</span>
                 </div>
-                <div className="p-3 bg-[#a3e635] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
+                <div className="p-2.5 sm:p-3 bg-[#a3e635] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
                   <span className="font-black text-2xl sm:text-3xl text-black block leading-none">20+</span>
-                  <span className="font-extrabold text-[10px] sm:text-xs uppercase tracking-wider text-black block mt-1">Karya Tipografi</span>
+                  <span className="font-extrabold text-[10px] sm:text-xs uppercase tracking-wider text-black block mt-1">Tipografi</span>
                 </div>
-                <div className="p-3 bg-[#ff90e8] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
+                <div className="p-2.5 sm:p-3 bg-[#ff90e8] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
                   <span className="font-black text-2xl sm:text-3xl text-black block leading-none">{personalInfo.instagramFollowers}</span>
                   <span className="font-extrabold text-[10px] sm:text-xs uppercase tracking-wider text-black block mt-1">IG Followers</span>
                 </div>
-                <div className="p-3 bg-[#88aaee] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
-                  <span className="font-black text-xl sm:text-2xl text-black block leading-none pt-1">Smile Train</span>
-                  <span className="font-extrabold text-[10px] sm:text-xs uppercase tracking-wider text-black block mt-1">Social Partner</span>
+                <div className="p-2.5 sm:p-3 bg-[#88aaee] border-2.5 border-black rounded-xl text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:scale-102 transition-transform">
+                  <span className="font-black text-lg sm:text-2xl text-black block leading-none pt-0.5">Smile Train</span>
+                  <span className="font-extrabold text-[10px] sm:text-xs uppercase tracking-wider text-black block mt-1">Partner</span>
                 </div>
               </div>
 
-              <div className="p-4 bg-[#bbf7d0] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+              <div className="p-3.5 sm:p-4 bg-[#bbf7d0] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                 <p className="text-xs md:text-sm font-extrabold text-black">
                   💬 {personalInfo.friendMessage}
                 </p>
@@ -270,27 +270,27 @@ export default function About() {
           </div>
 
           {/* Right: Education Tabs & Organizations */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6">
             {/* Education Card */}
-            <div className="bg-white border-3 border-black rounded-2xl p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-              <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b-2.5 border-black">
+            <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+              <div className="flex items-center justify-between gap-2 mb-3.5 sm:mb-4 pb-2.5 sm:pb-3 border-b-2.5 border-black">
                 <div className="flex items-center gap-2">
-                  <span className="p-2 bg-[#88aaee] border-2 border-black rounded-lg font-black text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                  <span className="p-1.5 sm:p-2 bg-[#88aaee] border-2 border-black rounded-lg font-black text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                     🎓
                   </span>
-                  <h3 className="text-xl md:text-2xl font-black text-black">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-black text-black">
                     Pendidikan & MBKM
                   </h3>
                 </div>
               </div>
 
               {/* Education Tab Buttons */}
-              <div className="flex gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                 {education.map((category, idx) => (
                   <button
                     key={category.category}
                     onClick={() => setActiveEduTab(idx)}
-                    className={`px-4 py-2 font-black text-xs md:text-sm rounded-xl border-2.5 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all ${
+                    className={`px-3.5 py-2 sm:px-4 sm:py-2 min-h-[44px] flex items-center justify-center font-black text-xs md:text-sm rounded-xl border-2.5 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer ${
                       activeEduTab === idx
                         ? "bg-[#bc95d4] text-black -translate-y-0.5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
                         : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
@@ -302,17 +302,17 @@ export default function About() {
               </div>
 
               {/* Education Items */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {education[activeEduTab].items.map((item, i) => (
                   <div
                     key={i}
-                    className="p-4 bg-[#faf8ff] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#e0d1ff]/50 transition-colors"
+                    className="p-3.5 sm:p-4 bg-[#faf8ff] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#e0d1ff]/50 transition-colors"
                   >
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                    <div className="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 mb-1">
                       <h4 className="font-extrabold text-sm md:text-base text-black">
                         {item.title}
                       </h4>
-                      <span className="inline-flex items-center gap-1 text-xs font-black px-2.5 py-0.5 bg-[#ffdb58] border-2 border-black rounded-md shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+                      <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 bg-[#ffdb58] border-2 border-black rounded-md shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
                         <Calendar size={12} /> {item.period}
                       </span>
                     </div>
@@ -325,16 +325,16 @@ export default function About() {
             </div>
 
             {/* Organizations Card */}
-            <div className="bg-white border-3 border-black rounded-2xl p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b-2.5 border-black">
-                <span className="p-2 bg-[#ff90e8] border-2 border-black rounded-lg font-black text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+            <div className="bg-white border-3 border-black rounded-2xl p-4 sm:p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+              <div className="flex items-center gap-2 mb-3.5 sm:mb-4 pb-2.5 sm:pb-3 border-b-2.5 border-black">
+                <span className="p-1.5 sm:p-2 bg-[#ff90e8] border-2 border-black rounded-lg font-black text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   🏛️
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-black text-black">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-black text-black">
                     Organisasi & Pengabdian Sosial
                   </h3>
-                  <p className="text-xs font-bold text-neutral-600">Komunitas, Relawan & Seni Kreatif</p>
+                  <p className="text-[11px] sm:text-xs font-bold text-neutral-600">Komunitas, Relawan & Seni Kreatif</p>
                 </div>
               </div>
 
@@ -342,9 +342,9 @@ export default function About() {
                 {organizations.map((org, i) => (
                   <div
                     key={i}
-                    className="p-4 bg-[#faf8ff] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff90e8]/20 transition-colors"
+                    className="p-3.5 sm:p-4 bg-[#faf8ff] border-2.5 border-black rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff90e8]/20 transition-colors"
                   >
-                    <div className="flex flex-wrap items-start justify-between gap-2 mb-1.5">
+                    <div className="flex flex-wrap items-start justify-between gap-1.5 sm:gap-2 mb-1.5">
                       <div>
                         <h4 className="font-extrabold text-sm md:text-base text-black">
                           {org.title}
