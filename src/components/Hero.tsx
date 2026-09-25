@@ -33,41 +33,41 @@ function ProfileCardFrame({
   return (
     <div className={`relative group w-full mx-auto ${className}`}>
       {/* Floating Top Badge */}
-      <div className="absolute -top-1.5 -right-1.5 sm:-top-3 sm:-right-3 bg-[#ffdb58] text-black border-1.5 sm:border-2 border-black rounded-md sm:rounded-xl px-1.5 sm:px-2 py-0.5 font-black text-[8px] sm:text-xs shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-3 z-20 hover:scale-105 transition-transform whitespace-nowrap">
+      <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-[#ffdb58] text-black border-2 border-black rounded-lg sm:rounded-xl px-2 sm:px-2.5 py-0.5 sm:py-1 font-black text-[10px] sm:text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rotate-3 z-20 hover:scale-105 transition-transform whitespace-nowrap">
         ⚡ Front-End Dev
       </div>
 
       {/* Floating Bottom Badge */}
-      <div className="absolute -bottom-1.5 -left-1.5 sm:-bottom-3 sm:-left-3 bg-[#a3e635] text-black border-1.5 sm:border-2 border-black rounded-md sm:rounded-xl px-1.5 sm:px-2 py-0.5 font-black text-[8px] sm:text-xs shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] -rotate-3 z-20 hover:scale-105 transition-transform whitespace-nowrap">
+      <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 bg-[#a3e635] text-black border-2 border-black rounded-lg sm:rounded-xl px-2 sm:px-2.5 py-0.5 sm:py-1 font-black text-[10px] sm:text-xs shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] -rotate-3 z-20 hover:scale-105 transition-transform whitespace-nowrap">
         🚀 React & Next.js
       </div>
 
       {/* Decorative shadow layer */}
-      <div className="absolute inset-0 bg-black rounded-xl sm:rounded-3xl translate-x-1.5 translate-y-1.5 sm:translate-x-2.5 sm:translate-y-2.5 -rotate-1 group-hover:rotate-0 transition-transform"></div>
+      <div className="absolute inset-0 bg-black rounded-2xl sm:rounded-3xl translate-x-2 translate-y-2 sm:translate-x-2.5 sm:translate-y-2.5 -rotate-1 group-hover:rotate-0 transition-transform"></div>
 
       {/* Main Card Frame */}
-      <div className="relative bg-[#a388ee] border-2 sm:border-3.5 border-black rounded-xl sm:rounded-3xl p-2.5 sm:p-4 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+      <div className="relative bg-[#a388ee] border-2.5 sm:border-3.5 border-black rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-[3.5px_3.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
         {/* Header Dots in Neobrutalism Mac Style */}
-        <div className="flex items-center justify-between pb-1 sm:pb-2.5 mb-1.5 sm:mb-3 border-b-1.5 sm:border-b-3 border-black">
+        <div className="flex items-center justify-between pb-1.5 sm:pb-2.5 mb-2 sm:mb-3 border-b-2 sm:border-b-3 border-black">
           <div className="flex items-center gap-1 sm:gap-1.5">
-            <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#ff5f56] border border-black inline-block"></span>
-            <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#ffbd2e] border border-black inline-block"></span>
-            <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#27c93f] border border-black inline-block"></span>
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ff5f56] border border-black inline-block"></span>
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ffbd2e] border border-black inline-block"></span>
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#27c93f] border border-black inline-block"></span>
           </div>
-          <span className="text-[8px] sm:text-[10px] font-mono font-bold bg-white px-1 sm:px-1.5 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+          <span className="text-[9px] sm:text-[10px] font-mono font-bold bg-white px-1.5 py-0.5 rounded border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
             profile.tsx
           </span>
         </div>
 
         {/* Profile Image Frame */}
         <div
-          className={`relative w-full aspect-square ${imgSize} mx-auto bg-[#ffdb58] border-1.5 sm:border-3 border-black rounded-lg sm:rounded-2xl overflow-hidden shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]`}
+          className={`relative w-full aspect-square ${imgSize} mx-auto bg-[#ffdb58] border-2 sm:border-3 border-black rounded-xl sm:rounded-2xl overflow-hidden shadow-[2.5px_2.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]`}
         >
           <Image
             src={personalInfo.profileImage}
             alt={personalInfo.name}
             fill
-            sizes="(max-width: 640px) 160px, 320px"
+            sizes="(max-width: 640px) 240px, 320px"
             style={{ objectPosition: "center 32%" }}
             className="object-cover scale-110 hover:scale-115 transition-transform duration-300"
             priority
@@ -75,8 +75,8 @@ function ProfileCardFrame({
         </div>
 
         {/* Badges Floating over Card */}
-        <div className="mt-1.5 sm:mt-3.5 flex items-center justify-center">
-          <div className="bg-white px-1.5 py-0.5 sm:px-3 sm:py-1 border border-black rounded sm:rounded-xl font-black text-[9px] sm:text-xs shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] sm:shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)] text-center">
+        <div className="mt-2.5 sm:mt-3.5 flex items-center justify-center">
+          <div className="bg-white px-2.5 py-1 sm:px-3 sm:py-1 border-1.5 sm:border-2 border-black rounded-lg sm:rounded-xl font-black text-[11px] sm:text-xs shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)] text-center">
             🎓 Universitas Handayani Makassar
           </div>
         </div>
@@ -124,21 +124,21 @@ export default function Hero() {
         </span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-3 sm:px-5 md:px-6 w-full relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 w-full relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-12 items-center">
           {/* Main Text & Content Column */}
-          <div className="lg:col-span-7 flex flex-col items-start gap-2.5 sm:gap-4 md:gap-5 text-left">
+          <div className="lg:col-span-7 flex flex-col items-start gap-3 sm:gap-4 md:gap-5 text-left">
             {/* Main Headline */}
-            <div className="space-y-1.5 sm:space-y-3 w-full">
+            <div className="space-y-2 sm:space-y-3 w-full">
               {/* Kicker Greeting */}
-              <p className="text-sm sm:text-xl md:text-2xl font-black text-neutral-800">
+              <p className="text-lg sm:text-xl md:text-2xl font-black text-neutral-800">
                 Halo, saya
               </p>
 
               {/* Name Headline Box */}
               <div>
                 <h1 className="inline-block max-w-full">
-                  <span className="relative inline-block max-w-full bg-[#ffdb58] text-black text-xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black px-2.5 sm:px-5 py-1 sm:py-2 border-2 sm:border-3.5 border-black rounded-lg sm:rounded-2xl shadow-[2.5px_2.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] -rotate-1 tracking-tight leading-tight break-words">
+                  <span className="relative inline-block max-w-full bg-[#ffdb58] text-black text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black px-3.5 sm:px-5 py-1.5 sm:py-2 border-2.5 sm:border-3.5 border-black rounded-xl sm:rounded-2xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] -rotate-1 tracking-tight leading-tight break-words">
                     {personalInfo.name}
                   </span>
                 </h1>
@@ -146,23 +146,23 @@ export default function Hero() {
 
               {/* Dynamic Typing Role */}
               <div className="pt-0.5 sm:pt-1">
-                <div className="flex flex-wrap items-center gap-1.5 sm:gap-3">
-                  <span className="text-xs sm:text-lg md:text-xl font-extrabold text-neutral-800">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                  <span className="text-base sm:text-lg md:text-xl font-extrabold text-neutral-800">
                     Saya seorang
                   </span>
-                  <span className="relative inline-block max-w-full bg-[#88aaee] text-black px-2.5 sm:px-4 py-0.5 sm:py-1.5 border-2 sm:border-3 border-black rounded-lg sm:rounded-xl shadow-[2.5px_2.5px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 text-xs sm:text-xl md:text-2xl lg:text-3xl font-black break-words">
+                  <span className="relative inline-block max-w-full bg-[#88aaee] text-black px-3 sm:px-4 py-1 sm:py-1.5 border-2 sm:border-3 border-black rounded-lg sm:rounded-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 text-base sm:text-xl md:text-2xl lg:text-3xl font-black break-words">
                     {displayText || "\u00A0"}
-                    <span className="inline-block w-1 sm:w-2 h-3 sm:h-6 md:h-7 bg-black ml-1 align-middle animate-pulse"></span>
+                    <span className="inline-block w-1.5 sm:w-2 h-4 sm:h-6 md:h-7 bg-black ml-1.5 align-middle animate-pulse"></span>
                   </span>
                 </div>
               </div>
             </div>
 
             {/* Mobile-Only Avatar Card: Positioned ABOVE tagline and CTA buttons on mobile */}
-            <div className="w-full flex justify-center py-1 my-0.5 lg:hidden">
+            <div className="w-full flex justify-center py-2 my-1 lg:hidden">
               <ProfileCardFrame
-                className="max-w-[160px] sm:max-w-[220px]"
-                imgSize="max-w-[125px] sm:max-w-[170px]"
+                className="max-w-[230px] sm:max-w-[270px]"
+                imgSize="max-w-[180px] sm:max-w-[215px]"
               />
             </div>
 
